@@ -1,6 +1,6 @@
 <?php
 
-namespace developera_av\Request\Request;
+namespace testdevelopera_av\Request\Request;
 
 use \Yii;
 use \yii\web\Request as BaseRequest;
