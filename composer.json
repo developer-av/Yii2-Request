@@ -1,0 +1,11 @@
+{
+    "name": "developer-av/yii2-request",
+    "description": "Ecso Yii2-Request.",
+    "authors": [
+        {
+            "name": "developer-av",
+            "email": "developer-av@yandex.ru"
+        }
+    ],
+    "require": {}
+}
