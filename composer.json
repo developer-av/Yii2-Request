@@ -2,7 +2,7 @@
     "name": "developer-av/yii2-request",
     "description": "Ecso Yii2-Request.",
     "type": "yii2-extension",
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "license": "MIT",
     "authors": [
         {
