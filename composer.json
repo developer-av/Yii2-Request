@@ -1,11 +1,16 @@
 {
     "name": "developer-av/yii2-request",
     "description": "Ecso Yii2-Request.",
+    "type": "yii2-extension",
+    "minimum-stability": "dev",
+    "license": "MIT",
     "authors": [
         {
-            "name": "developer-av",
+            "name": "Alex Vodolazhchenko",
             "email": "developer-av@yandex.ru"
         }
     ],
-    "require": {}
+    "require": {
+        "yiisoft/yii2": "~2.0.7"
+    }
 }
