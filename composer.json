@@ -1,8 +1,8 @@
 {
     "name": "developer-av/yii2-request",
-    "description": "Ecso Yii2-Request.",
+    "description": "Ecso Yii2-Request && Yii2-UrlManager.",
+    "keywords": ["yii2", "duplicate", "language", "ecso", "urlmanager", "request"],
     "type": "yii2-extension",
-    "minimum-stability": "stable",
     "license": "MIT",
     "authors": [
         {
@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "yiisoft/yii2": "~2.0.7"
+        "yiisoft/yii2": "~2.0.0"
     },
     "autoload": {
         "psr-4": { "developerav\\request\\": "" }

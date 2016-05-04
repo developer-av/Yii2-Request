@@ -1,4 +1,4 @@
-# duplicate url redirect && language in url Extension for Yii 2
+# Duplicate url redirect && language in url Extension for Yii 2
 
 [![Total Downloads](https://poser.pugx.org/developer-av/yii2-request/downloads)](https://packagist.org/packages/developer-av/yii2-request)
 [![License](https://poser.pugx.org/developer-av/yii2-request/license)](https://packagist.org/packages/developer-av/yii2-request)
