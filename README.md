@@ -39,6 +39,13 @@ return [
                 'ru' => 'ru-RU',
             ]
         ],
+        'urlManager' => [
+            'class' => 'developerav\request\UrlManager',
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules' => [
+            ],
+        ],
     ],
 ];
 ```
