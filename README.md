@@ -1,6 +1,5 @@
 # Request Extension for Yii 2
 
-[![Latest Stable Version](https://poser.pugx.org/developer-av/yii2-request/v/stable)](https://packagist.org/packages/developer-av/yii2-request)
 [![Total Downloads](https://poser.pugx.org/developer-av/yii2-request/downloads)](https://packagist.org/packages/developer-av/yii2-request)
 [![License](https://poser.pugx.org/developer-av/yii2-request/license)](https://packagist.org/packages/developer-av/yii2-request)
 
