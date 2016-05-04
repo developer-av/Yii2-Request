@@ -33,7 +33,7 @@ return [
     'components' => [
         'request' => [
             'class' => 'developerav\request\Request',
-            'cookieValidationKey' => 'E25Mv11DXROHLEpbgJXk9Ju4F8nUvY-F',
+            'cookieValidationKey' => '************,
             'languages' => [
                 'en' => 'en-US',//default language
                 'ru' => 'ru-RU',
