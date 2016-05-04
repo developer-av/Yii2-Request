@@ -54,5 +54,5 @@ return [
 Generate Url:
 
 ```php
-Html::a('test', ['', 'lang_id' => 'uk'])
+Html::a('test', ['', 'lang_id' => 'ru'])
 ```
