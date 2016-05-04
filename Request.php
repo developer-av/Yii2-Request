@@ -2,9 +2,8 @@
 
 namespace developerav\request;
 
-use \Yii;
 use \yii\web\Request as BaseRequest;
-use \developera_av\Request\models\Lang;
+use developerav\request\models\Lang;
 
 /**
  * Get lang from url
@@ -14,6 +13,16 @@ class Request extends BaseRequest {
 
     private $_lang_url;
 
+    public $languages;
+
+    public function __construct($config = array()) {
+        if(empty($this->languages))
+        {
+            $this->languages = ['default' => \yii::$app->language];
+        }
+        parent::__construct($config);
+    }
+
     public function getLangUrl() {
         if ($this->_lang_url === null) {
             $this->_lang_url = $this->getUrl();
@@ -21,6 +30,7 @@ class Request extends BaseRequest {
             $url_list = explode('/', $this->_lang_url);
 
             $lang_url = isset($url_list[1]) ? $url_list[1] : null;
+
             Lang::setCurrent($lang_url);
 
             if ($lang_url !== null && $lang_url === Lang::getCurrent()['url'] &&
