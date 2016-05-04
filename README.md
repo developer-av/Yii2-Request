@@ -41,6 +41,7 @@ return [
         ],
         'urlManager' => [
             'class' => 'developerav\request\UrlManager',
+            'withoutWww' => true, // 301 redirect from www.exemple.com -> exemple.com
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
