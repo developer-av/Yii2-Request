@@ -12,5 +12,8 @@
     ],
     "require": {
         "yiisoft/yii2": "~2.0.7"
+    },
+    "autoload": {
+        "psr-4": { "developerav\\request\\": "" }
     }
 }

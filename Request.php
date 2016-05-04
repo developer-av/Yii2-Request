@@ -1,13 +1,13 @@
 <?php
 
-namespace developera_av\Request\Request;
+namespace developerav\request;
 
 use \Yii;
 use \yii\web\Request as BaseRequest;
 use \developera_av\Request\models\Lang;
 
 /**
- * Description of MyLangRequest
+ * Get lang from url
  *
  */
 class Request extends BaseRequest {
