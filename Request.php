@@ -27,21 +27,24 @@ class Request extends BaseRequest {
         if ($this->_lang_url === null) {
             $this->_lang_url = $this->getUrl();
 
+            $homeUrl = explode('/', \Yii::$app->homeUrl);
             $url_list = explode('/', $this->_lang_url);
 
-            $lang_url = isset($url_list[1]) ? $url_list[1] : null;
+            $lang_url = isset($url_list[count($homeUrl) - 1]) ? $url_list[count($homeUrl) - 1] : null;
 
             Lang::setCurrent($lang_url);
 
             if ($lang_url !== null && $lang_url === Lang::getCurrent()['url'] &&
-                    strpos($this->_lang_url, Lang::getCurrent()['url']) === 1) {
-                $this->_lang_url = substr($this->_lang_url, strlen(Lang::getCurrent()['url']) + 1);
+                    strpos($this->_lang_url, Lang::getCurrent()['url']) !== false) {
+//                $this->_lang_url = substr($this->_lang_url, strlen(Lang::getCurrent()['url']) + 1);
+                $this->_lang_url = str_replace('/'.Lang::getCurrent()['url'], '', $this->_lang_url);
             }
         }
         if(empty($this->_lang_url))
         {
             $this->_lang_url = '/';
         }
+
         return $this->_lang_url;
     }
 
@@ -79,6 +82,10 @@ class Request extends BaseRequest {
             $pathInfo = substr($_SERVER['PHP_SELF'], strlen($scriptUrl));
         } else {
             throw new InvalidConfigException('Unable to determine the path info of the current request.');
+        }
+        if(empty($pathInfo))
+        {
+            $pathInfo = '/';
         }
 
         if ($pathInfo[0] === '/') {

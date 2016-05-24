@@ -126,7 +126,9 @@ class UrlManager extends BaseUrlManager {
     }
 
     public function createUrl($params) {
+
         if (isset($params['lang_id'])) {
+
             //Если указан идентификатор языка, то делаем попытку найти язык в БД,
             //иначе работаем с языком по умолчанию
             $lang = Lang::getLangByUrl($params['lang_id']);
@@ -142,15 +144,23 @@ class UrlManager extends BaseUrlManager {
         //Получаем сформированный URL(без префикса идентификатора языка)
         $url = parent::createUrl($params);
 
+        $url = preg_replace('#^'.\Yii::$app->homeUrl.'#', '', $url);
+
+//        var_dump($url);
+//        var_dump(\Yii::$app->homeUrl.$lang['url'].'/'.$url);die;
         //Добавляем к URL префикс - буквенный идентификатор языка
         if ($lang != Lang::getDefaultLang()) {
-            if ($url == '/') {
-                return '/' . $lang['url'] . '/';
-            } else {
-                return '/' . $lang['url'] . $url;
-            }
+//            if ($url == '') {
+//                return '/' . $lang['url'] . '/';
+//            } else {
+//                return '/' . $lang['url'] . $url;
+//            }
+            return \Yii::$app->homeUrl.$lang['url'].'/'.$url;
         } else {
-            return $url;
+            if ($url == '') {
+                return \Yii::$app->homeUrl;
+            }
+            return \Yii::$app->homeUrl.$url;
         }
     }
 
